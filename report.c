@@ -563,7 +563,7 @@ prnt_singleitem_
 	pq 					= p_rprt_info->pq;
 	confidence_factor	= p_rprt_info->confidence_factor;
 
-	sprintf(cfs_buf, "%3.0lf", pq[x].cfs_value);
+	sprintf(cfs_buf, "%3.1lf", pq[x].cfs_value);
 	cfs_str  = pq[x].cfs_is_ok? cfs_buf : "---";
 	sdev_str = sdev? get_sdev_str (sdev[j]     , confidence_factor, sdev_buf, decimals): NOSDEV;
 	oerr_str = sdev? get_sdev_str (oi[j].opperr, confidence_factor, oerr_buf, decimals): NOSDEV;
